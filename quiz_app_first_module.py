@@ -19,12 +19,12 @@ dict_QA = {
 for ques,choices in dict_QA.items():
     correct_ans = choices[0]
     sorted_alternative = sorted(choices)
-    for label,choice in enumerate(sorted_alternative):
+    for label,choice in enumerate(sorted_alternative,1):
         print(f" {label}) {choice}")
     
     
     user_label= int(input(f"{ques}?"))
-    user_ans = sorted_alternative[user_label]
+    user_ans = sorted_alternative[user_label-1]
     if user_ans == correct_ans:
         print("Correct,nicely done")
     else:
